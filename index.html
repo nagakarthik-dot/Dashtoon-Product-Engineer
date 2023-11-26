@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comic Generator</title>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="/static/mobile.css"> <!-- Link to the mobile-specific CSS file -->
+    <title>Comic Book Generator</title>
    
 
     <style>
@@ -19,17 +20,17 @@
         #comicForm {
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px; /* Add padding for better spacing on smaller screens */
+            padding: 20px; 
         }
 
         #comicForm div {
-            margin-bottom: 20px; /* Increase margin for better spacing between form elements on smaller screens */
+            margin-bottom: 20px; 
         }
 
         label {
             display: block;
             margin-bottom: 5px;
-            font-size: 1.2em; /* Increase font size for better readability on smaller screens */
+            font-size: 1.2em; 
         }
 
         input[type="text"],
@@ -37,7 +38,7 @@
             width: 100%;
             box-sizing: border-box;
             padding: 8px;
-            font-size: 1em; /* Adjust font size for better readability on smaller screens */
+            font-size: 1em; 
         }
 
         button {
@@ -48,7 +49,7 @@
             border-radius: 5px;
             cursor: pointer;
             touch-action: manipulation;
-            font-size: 1.2em; /* Increase font size for better visibility on smaller screens */
+            font-size: 1.2em; 
         }
 
         /* Comic Display Styles */
@@ -73,7 +74,7 @@
         /* Media Queries */
         @media screen and (max-width: 600px) {
             #comicForm div {
-                margin-bottom: 10px; /* Adjust margin for better spacing on smaller screens */
+                margin-bottom: 10px; 
             }
         }
     </style>
@@ -81,7 +82,7 @@
 <body>
     <form id="comicForm">
         <div>
-            <label for="panel1BubbleText">Panel 1 Bubble Text:</label>
+            <label for="panel1BubbleText">Panel 1  Text:</label>
             <input type="text" id="panel1BubbleText" name="panel1BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -89,7 +90,7 @@
             <textarea name="panel1" rows="4" placeholder="Speech Bubble 1" required></textarea>
         </div>
         <div>
-            <label for="panel2BubbleText">Panel 2 Bubble Text:</label>
+            <label for="panel2BubbleText">Panel 2  Text:</label>
             <input type="text" id="panel2BubbleText" name="panel2BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -97,7 +98,7 @@
             <textarea name="panel2" rows="4" placeholder="Speech Bubble 2" required></textarea>
         </div>
         <div>
-            <label for="panel3BubbleText">Panel 3 Bubble Text:</label>
+            <label for="panel3BubbleText">Panel 3  Text:</label>
             <input type="text" id="panel3BubbleText" name="panel3BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -105,7 +106,7 @@
             <textarea name="panel3" rows="4" placeholder="Speech Bubble 3" required></textarea>
         </div>
         <div>
-            <label for="panel4BubbleText">Panel 4 Bubble Text:</label>
+            <label for="panel4BubbleText">Panel 4  Text:</label>
             <input type="text" id="panel4BubbleText" name="panel4BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -113,7 +114,7 @@
             <textarea name="panel4" rows="4" placeholder="Speech Bubble 4" required></textarea>
         </div>
         <div>
-            <label for="panel5BubbleText">Panel 5 Bubble Text:</label>
+            <label for="panel5BubbleText">Panel 5  Text:</label>
             <input type="text" id="panel5BubbleText" name="panel5BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -121,18 +122,15 @@
             <textarea name="panel5" rows="4" placeholder="Speech Bubble 5" required></textarea>
         </div>
         <div>
-            <label for="panel6BubbleText">Panel 6 Bubble Text:</label>
+            <label for="panel6BubbleText">Panel 6  Text:</label>
             <input type="text" id="panel6BubbleText" name="panel6BubbleText" placeholder="Enter text" required>
         </div>
         <div>
             <label for="panel6">Speech Bubble 6:</label>
             <textarea name="panel6" rows="4" placeholder="Speech Bubble 6" required></textarea>
         </div>
-        
-        <!-- Repeat similar blocks for panels 7 to 10 -->
-        <!-- Example for panel 7 -->
         <div>
-            <label for="panel7BubbleText">Panel 7 Bubble Text:</label>
+            <label for="panel7BubbleText">Panel 7  Text:</label>
             <input type="text" id="panel7BubbleText" name="panel7BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -140,28 +138,23 @@
             <textarea name="panel7" rows="4" placeholder="Speech Bubble 7" required></textarea>
         </div>
         <div>
-            <label for="panel8BubbleText">Panel 8 Bubble Text:</label>
+            <label for="panel8BubbleText">Panel 8  Text:</label>
             <input type="text" id="panel8BubbleText" name="panel8BubbleText" placeholder="Enter text" required>
         </div>
         <div>
             <label for="panel8">Speech Bubble 8:</label>
             <textarea name="panel8" rows="4" placeholder="Speech Bubble 8" required></textarea>
         </div>
-        
-        <!-- Repeat similar blocks for panels 9 to 10 -->
-        <!-- Example for panel 9 -->
         <div>
-            <label for="panel9BubbleText">Panel 9 Bubble Text:</label>
+            <label for="panel9BubbleText">Panel 9  Text:</label>
             <input type="text" id="panel9BubbleText" name="panel9BubbleText" placeholder="Enter text" required>
         </div>
         <div>
             <label for="panel9">Speech Bubble 9:</label>
             <textarea name="panel9" rows="4" placeholder="Speech Bubble 9" required></textarea>
         </div>
-        
-        <!-- Example for panel 10 -->
         <div>
-            <label for="panel10BubbleText">Panel 10 Bubble Text:</label>
+            <label for="panel10BubbleText">Panel 10  Text:</label>
             <input type="text" id="panel10BubbleText" name="panel10BubbleText" placeholder="Enter text" required>
         </div>
         <div>
@@ -229,7 +222,6 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        // Replace with the actual API key if needed
                     },
                     body: JSON.stringify(formData)
                 });
@@ -252,15 +244,13 @@
                     comicDisplay.removeChild(comicDisplay.firstChild);
                 }
 
-                // Create and append new images for each panel
+                
                 result.images.forEach((imageData, index) => {
                     // Create a div for each comic panel
                     const panelDiv = document.createElement('div');
                     panelDiv.className = 'comic-panel';
-
-                    // Create and append the image for each panel
                     const img = document.createElement('img');
-                    img.src = `data:image/png;base64,${imageData}`; // Replace with the actual base64-encoded image data
+                    img.src = `data:image/png;base64,${imageData}`; 
                     img.alt = `Generated Comic Panel ${index + 1}`;
                     panelDiv.appendChild(img);
 
@@ -268,7 +258,6 @@
                 });
             } catch (error) {
                 console.error('An error occurred:', error);
-                // Handle the error, display an error message, or take appropriate action
             }
         }
     </script>

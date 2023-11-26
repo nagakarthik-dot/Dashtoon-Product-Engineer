@@ -4,7 +4,7 @@ import base64
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import math
-app = Flask(__name__)
+app = Flask(__name__ ,  static_url_path='/static' )
 
 
 API_URL = "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud"
@@ -32,12 +32,11 @@ def set_panel_text(base64_image, panel_text, x, y, scale, max_chars_per_line=20)
 
 
     # Calculate the size of the elliptical speech bubble to fit the text
-    bubble_radius_x = text_width / 2 + bubble_padding  # Adjust the padding as needed
+    bubble_radius_x = text_width / 2 + bubble_padding  
     bubble_radius_y =text_height / 2
     bubble_radius_y=bubble_radius_y*(len(lines)+2)
-    # Calculate the size of the elliptical speech bubble to fit the text
     bubble_radius_x = (text_width / 2) * 0.0001
-     # Adjust the padding as needed
+    
 
     # Calculate the starting position for the text inside the bubble
     text_position = (x - text_width / 2, y - text_height / 2)
