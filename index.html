@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Generator</title>
+   
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Form Styles */
+        #comicForm {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px; /* Add padding for better spacing on smaller screens */
+        }
+
+        #comicForm div {
+            margin-bottom: 20px; /* Increase margin for better spacing between form elements on smaller screens */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em; /* Increase font size for better readability on smaller screens */
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 1em; /* Adjust font size for better readability on smaller screens */
+        }
+
+        button {
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            touch-action: manipulation;
+            font-size: 1.2em; /* Increase font size for better visibility on smaller screens */
+        }
+
+        /* Comic Display Styles */
+        #comicDisplay {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .comic-panel {
+            margin: 10px;
+            flex: 1 0 48%;
+        }
+
+        .comic-panel img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+            #comicForm div {
+                margin-bottom: 10px; /* Adjust margin for better spacing on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="comicForm">
+        <div>
+            <label for="panel1BubbleText">Panel 1 Bubble Text:</label>
+            <input type="text" id="panel1BubbleText" name="panel1BubbleText" placeholder="Enter bubble text for Speech Bubble 1" required>
+        </div>
+        <div>
+            <label for="panel1">Speech Bubble 1:</label>
+            <textarea name="panel1" rows="4" placeholder="Speech Bubble 1" required></textarea>
+        </div>
+        <div>
+            <label for="panel2BubbleText">Panel 2 Bubble Text:</label>
+            <input type="text" id="panel2BubbleText" name="panel2BubbleText" placeholder="Enter bubble text for Speech Bubble 2" required>
+        </div>
+        <div>
+            <label for="panel2">Speech Bubble 2:</label>
+            <textarea name="panel2" rows="4" placeholder="Speech Bubble 2" required></textarea>
+        </div>
+        <div>
+            <label for="panel3BubbleText">Panel 3 Bubble Text:</label>
+            <input type="text" id="panel3BubbleText" name="panel3BubbleText" placeholder="Enter bubble text for Speech Bubble 3" required>
+        </div>
+        <div>
+            <label for="panel3">Speech Bubble 3:</label>
+            <textarea name="panel3" rows="4" placeholder="Speech Bubble 3" required></textarea>
+        </div>
+        <div>
+            <label for="panel4BubbleText">Panel 4 Bubble Text:</label>
+            <input type="text" id="panel4BubbleText" name="panel4BubbleText" placeholder="Enter bubble text for Speech Bubble 4" required>
+        </div>
+        <div>
+            <label for="panel4">Speech Bubble 4:</label>
+            <textarea name="panel4" rows="4" placeholder="Speech Bubble 4" required></textarea>
+        </div>
+        <div>
+            <label for="panel5BubbleText">Panel 5 Bubble Text:</label>
+            <input type="text" id="panel5BubbleText" name="panel5BubbleText" placeholder="Enter bubble text for Speech Bubble 5" required>
+        </div>
+        <div>
+            <label for="panel5">Speech Bubble 5:</label>
+            <textarea name="panel5" rows="4" placeholder="Speech Bubble 5" required></textarea>
+        </div>
+        <div>
+            <label for="panel6BubbleText">Panel 6 Bubble Text:</label>
+            <input type="text" id="panel6BubbleText" name="panel6BubbleText" placeholder="Enter bubble text for Speech Bubble 6" required>
+        </div>
+        <div>
+            <label for="panel6">Speech Bubble 6:</label>
+            <textarea name="panel6" rows="4" placeholder="Speech Bubble 6" required></textarea>
+        </div>
+        
+        <!-- Repeat similar blocks for panels 7 to 10 -->
+        <!-- Example for panel 7 -->
+        <div>
+            <label for="panel7BubbleText">Panel 7 Bubble Text:</label>
+            <input type="text" id="panel7BubbleText" name="panel7BubbleText" placeholder="Enter bubble text for Speech Bubble 7" required>
+        </div>
+        <div>
+            <label for="panel7">Speech Bubble 7:</label>
+            <textarea name="panel7" rows="4" placeholder="Speech Bubble 7" required></textarea>
+        </div>
+        <div>
+            <label for="panel8BubbleText">Panel 8 Bubble Text:</label>
+            <input type="text" id="panel8BubbleText" name="panel8BubbleText" placeholder="Enter bubble text for Speech Bubble 8" required>
+        </div>
+        <div>
+            <label for="panel8">Speech Bubble 8:</label>
+            <textarea name="panel8" rows="4" placeholder="Speech Bubble 8" required></textarea>
+        </div>
+        
+        <!-- Repeat similar blocks for panels 9 to 10 -->
+        <!-- Example for panel 9 -->
+        <div>
+            <label for="panel9BubbleText">Panel 9 Bubble Text:</label>
+            <input type="text" id="panel9BubbleText" name="panel9BubbleText" placeholder="Enter bubble text for Speech Bubble 9" required>
+        </div>
+        <div>
+            <label for="panel9">Speech Bubble 9:</label>
+            <textarea name="panel9" rows="4" placeholder="Speech Bubble 9" required></textarea>
+        </div>
+        
+        <!-- Example for panel 10 -->
+        <div>
+            <label for="panel10BubbleText">Panel 10 Bubble Text:</label>
+            <input type="text" id="panel10BubbleText" name="panel10BubbleText" placeholder="Enter bubble text for Speech Bubble 10" required>
+        </div>
+        <div>
+            <label for="panel10">Speech Bubble 10:</label>
+            <textarea name="panel10" rows="4" placeholder="Speech Bubble 10" required></textarea>
+        </div>
+
+
+        <button type="button" onclick="generateComic()">Generate Comic</button>
+    </form>
+
+    <div id="comicDisplay">
+        <!-- Display the generated comic panels here -->
+    </div>
+
+    <script>
+        async function generateComic() {
+            const formData = {
+                "inputs": [
+                    {
+                        "text": document.querySelector('textarea[name="panel1"]').value,
+                        "bubbleText": document.getElementById('panel1BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel2"]').value,
+                        "bubbleText": document.getElementById('panel2BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel3"]').value,
+                        "bubbleText": document.getElementById('panel3BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel4"]').value,
+                        "bubbleText": document.getElementById('panel4BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel5"]').value,
+                        "bubbleText": document.getElementById('panel5BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel6"]').value,
+                        "bubbleText": document.getElementById('panel6BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel7"]').value,
+                        "bubbleText": document.getElementById('panel7BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel8"]').value,
+                        "bubbleText": document.getElementById('panel8BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel9"]').value,
+                        "bubbleText": document.getElementById('panel9BubbleText').value,
+                    },
+                    {
+                        "text": document.querySelector('textarea[name="panel10"]').value,
+                        "bubbleText": document.getElementById('panel10BubbleText').value,
+                    },
+                ]
+            };
+
+            try {
+                const response = await fetch('/generate_comic', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Replace with the actual API key if needed
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                console.log('Response Status:', response.status);
+
+                if (!response.ok) {
+                    console.error('Failed to generate comic:', response.status, response.statusText);
+                    // Display an error message to the user
+                    return;
+                }
+
+                const result = await response.json();
+
+                // Display the generated comic panels
+                const comicDisplay = document.getElementById('comicDisplay');
+
+                // Clear previous images and div elements
+                while (comicDisplay.firstChild) {
+                    comicDisplay.removeChild(comicDisplay.firstChild);
+                }
+
+                // Create and append new images for each panel
+                result.images.forEach((imageData, index) => {
+                    // Create a div for each comic panel
+                    const panelDiv = document.createElement('div');
+                    panelDiv.className = 'comic-panel';
+
+                    // Create and append the image for each panel
+                    const img = document.createElement('img');
+                    img.src = `data:image/png;base64,${imageData}`; // Replace with the actual base64-encoded image data
+                    img.alt = `Generated Comic Panel ${index + 1}`;
+                    panelDiv.appendChild(img);
+
+                    comicDisplay.appendChild(panelDiv);
+                });
+            } catch (error) {
+                console.error('An error occurred:', error);
+                // Handle the error, display an error message, or take appropriate action
+            }
+        }
+    </script>
+</body>
+</html>
